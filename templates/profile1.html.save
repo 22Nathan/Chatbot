@@ -1,0 +1,108 @@
+<html>
+ <script type="text/javascript" src="/static/js/main.js"></script>
+
+<body>
+	<!-- Code HTML du chat -->
+	
+	<!-- Cette encart comporte le site sur lequel va etre le chat  -->
+    <div id="center-text">
+        <h2>Projet ChatBot</h2>
+    </div>
+   ="stylesheet" type="text/css" href="/static/style.css">	
+    <script type="text/javascript" src="/static/js/main.js"></script> 
+    <div id="body">
+
+
+        <!--Bouton avec la bulle permettant d'ouvrir le chat au click -->
+        <div id="chat-circle" class="btn btn-raised">
+            <div id="chat-overlay"></div>
+			<!-- image de la bulle -->
+            <img class="chat-circle_robot" src="/static/bulle.png"/>
+        </div>
+
+        <!--Au click sur le bouton on ouvre cette encart comprenant le chat-->
+        <div class="chat-box">
+            <div class="chat-box-body">
+                <!--Message de salutation-->
+                <div class="chat-box-welcome__header">
+					<!-- Entête avec un bouton d'annulation pour fermer le chat -->
+                    <div class="chat-box__header-text">
+                        <p3 class="chat-box-welcome__company-name">ChatBot</p3>
+						<!-- Bouton qui au click ferme le chat -->
+                        <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+                    </div>
+					<!-- Corps du message d'accueil avec l'image du robot et le texte-->
+                    <div id="chat-box-welcome__ava">
+                        <img class="chat-box-welcome_robot" src="/static/robot.png">
+                    </div>
+                    <div class="chat-box-welcome__welcome-text">
+                        <p>Bonjour, Comment puis-je vous aider ?</p>
+                    </div>
+                </div>
+
+
+
+
+                <!--Au click sur la zone de texte On entre dans le chat-->
+                <div id="chat-box__wraper">
+					<!-- Entête avec un bouton d'annulation pour fermer le chat -->
+                    <div class="chat-box-header">
+                        ChatBot
+                        <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+                    </div>
+
+
+					<!-- Simple séparation entre l'entête et le corp -->
+                    <div class="chat-box-overlay">
+                    </div>
+					
+					<!--Messagerie du chat -->
+                    <div class="chat-logs">
+					
+						<!-- Encart affichant le premier message du bot -->
+                        <div id="cm-msg-0" class="chat-msg bot">
+							<!-- section contenant l'image -->
+                            <span class="msg-avatar">
+								<!--image du robot pour les reponses-->
+								<img class="chat-box-overlay_robot" src="https://cdn.iconscout.com/icon/free/png-256/robot-86-404724.png">          
+							</span>
+							<!-- section contenant le message -->
+                            <div class="cm-msg-text">
+                                Bonjour ! Je suis Aria, comment puis-je vous aider ?
+                            </div>
+                        </div>
+
+                    
+					
+					<!-- encart pour les messages utilisateur -->
+					<!-- info : les classes css sont les mêmes que ce soit pour les réponses ou les messages utilisateurs seul l'emplacement de la section d'image et de texte sont à inverser -->
+                        <div id="cm-msg-0" class="chat-msg bot">
+							<!-- Inversion des champs texte et image (cf:encart messages du bot)-->
+							<div class="cm-msg-text">
+                                Comment marche le chatbox ?
+                            </div>
+							<span class="msg-avatar">
+								<!--image utilisateur pour les mesaages-->
+								<img class="chat-box-overlay_robot" src="/static/user.png">          
+							</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+			
+			<!-- Encart "zone de texte" permettant d'envoyer les messages -->
+            <div class="chat-input-box" id="chatLog">
+				<!-- formulaire avec une zone de texte et un bouton avec l'icone de flèche -->
+                <form class="chat-input__form">
+                   <input type="text" class="chat-input__text" id="chat-input__text" placeholder="Inscrire votre méssage..." /> 
+                    <button type="submit" class="chat-submit" id="chat-submit">
+                      <i class="material-icons">send</i>
+                  </button>
+                </form>
+            </div>
+        </div>
+    </div>
+	</html>
+    <!-- Fin du code HTML du chat -->
